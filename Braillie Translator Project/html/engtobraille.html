@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAILLE TRANSLATOR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="/css1/engtobraille.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="/html/home.html"><img src="\images\logo.png" alt="" class="logo"></a>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">INFO</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="headbox">
+                <p class="translate">TRANSLATE VIA TEXT</p>
+                <hr>
+                </div>
+                <div class="form form-group">
+                    <label for="exampleFormControlTextarea1" class="form">ENTER BRAILLE</label>
+                    <BR><BR>
+                    <textarea id = "result" rows="8" cols="80"></textarea>
+                    <div class="record"><button id = "start" ><span class="bi bi-mic green-color"> </span></button>
+                    <button id = "stop" ><span class="bi bi-mic-mute-fill red-color"> </span></button></div>
+                </div>
+                <div class="button">
+                    <button class="text btn btn-primary" id="button">TRANSALTE</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="headbox">
+                    <p class="translate">TRANSLATE VIA IMAGE</p>
+                    <hr>
+                    </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">CHOOSE A IMAGE</label>
+                    <input class="form-control form-control-sm" type="file" id="formFile">
+                </div>
+                <div class="button">
+                    <button class="img btn btn-primary">TRANSALTE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var startButton = document.getElementById('start');
+        var stopButton = document.getElementById('stop');
+        var resultElement = document.getElementById('result');
+
+        var recognition = new WebkitSpeechRecognition();
+
+        recognition.lang = window.navigator.language;
+        recognition.interimResults = true;
+
+        startButton.addEventListener('click', () => { recognition.start(); });
+        stopButton.addEventListener('click', () => { recognition.stop(); });
+
+        recognition.addEventListener('result', (event) => {
+            const result = event.results[event.results.length - 1][0].transcript;
+            resultElement.textContent = result;
+        });
+    </script>
+</body>
+</html>

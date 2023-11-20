@@ -1,0 +1,179 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.navbar{
+    width:100%;
+    height: fit-content;
+    margin: auto;
+    padding: 35px 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin-left: 40px;
+    position: relative;
+    padding-right: 10px;
+    
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:rgb(241, 248, 248);
+}
+
+.navbar ul li::after{
+    width: 0;
+    content: '';
+    height:3px;
+    background: rgb(242, 140, 6);
+    position: absolute;
+    left:0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 89%;
+}
+
+.logo{
+    width: 80px;
+    cursor:pointer;
+    font-size: 20px;
+    color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 100px;
+    position: relative;
+    left:100px
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+.box{
+    background-color: rgb(222, 222, 227);
+    color: black;
+    width: 25rem;
+    height: 67vh;
+    margin-left: 20px;
+}
+.translate{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    font-size: 25px;
+    font-family:Comic Sans MS, Comic Sans, cursive;
+   
+}
+
+.headbox{
+    background-color: orange;
+    width: 100%;
+}
+
+label{
+    font-family: Impact, fantasy;
+    font-size: 30px;
+    position: relative;
+}
+.box textarea{
+    position: relative;
+    bottom: 45px;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    border-color: #bfbfbf;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+textarea{
+    -webkit-transition: height .35s ease-in-out;
+    transition: height .35s ease-in-out;
+}
+
+textarea:is(:focus,:valid){
+    border-width: 2px;
+    border-color: rgb(44, 9, 243);
+    height: 200px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.btn{
+    background-color: orange;
+    border: none;
+}
+.text{
+    position: relative;
+    bottom: 42px;
+}
+
+.form-control{
+    margin-left: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+label.form-label {
+    position: relative;
+    left: 80px;
+}
+
+button#start {
+    position: relative;
+    right: 9rem;
+    bottom: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color:white;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+
+
+button#stop {
+    position: relative;
+    right: 8.7rem;
+    bottom: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color:white;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+.red-color {
+    color:red;
+}
+
+.green-color {
+    color:green;
+}

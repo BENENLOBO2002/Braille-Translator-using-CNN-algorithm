@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAILLE TRANSLATOR</title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="/css1/brailletoeng.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="/html/home.html"><img src="\images\logo.png" alt="" class="logo"></a>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">INFO</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="headbox">
+                <p class="translate">TRANSLATE VIA TEXT</p>
+                <hr>
+                </div>
+                <div class="form form-group">
+                    <label for="exampleFormControlTextarea1" class="form">ENTER BRAILLE</label>
+                    <BR><BR>
+                    <textarea placeholder="type something here..." class="text-area" id="englishtext" name="exampleFormControlTextarea1" required></textarea>
+                </div>
+                <div class="button">
+                    <button class="text btn btn-primary" id="button">TRANSALTE</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="headbox">
+                    <p class="translate">TRANSLATE VIA IMAGE</p>
+                    <hr>
+                    </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">CHOOSE A IMAGE</label>
+                    <input class="form-control form-control-sm" type="file" id="formFile">
+                </div>
+                <div class="button">
+                    <button class="img btn btn-primary">TRANSALTE</button>
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>
